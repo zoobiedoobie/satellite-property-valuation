@@ -47,3 +47,7 @@ def download_images(split="train", zoom=16, size="256x256"):
             print(f"Failed at index {idx}")
 
     print(f"Downloaded images for {split} set")
+     response = requests.get(url, timeout=10)
+    if idx % 50 == 0:
+    print(f"Downloaded {idx}/{len(df)} images")
+
